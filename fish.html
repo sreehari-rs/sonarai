@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonarAI - Fisherman Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-md">
+        <h1 class="text-3xl font-extrabold text-blue-900 mb-2 text-center">SonarAI</h1>
+        <p class="text-gray-500 mb-6 text-sm text-center">Detect fish schools vs. rocky obstacles instantly.</p>
+
+        <form action="predict.php" method="POST" class="space-y-4">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Paste 60 Sonar Frequencies:</label>
+                <textarea 
+                    name="sonar_data" 
+                    class="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-blue-500 outline-none transition-all text-xs font-mono"
+                    placeholder="0.02, 0.03, 0.04..." 
+                    rows="5" required></textarea>
+                <p class="text-[10px] text-gray-400 mt-2">Values must be comma-separated decimals.</p>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg transition-transform active:scale-95">
+                START AI ANALYSIS
+            </button>
+        </form>
+    </div>
+</body>
+</html>
